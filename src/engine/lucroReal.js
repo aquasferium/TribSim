@@ -1,0 +1,1 @@
+export const calcularLucroReal=({faturamento,margem=0.15})=>{const lucro=faturamento*margem;return{irpj:lucro*0.15+Math.max(0,lucro-20000)*0.1,csll:lucro*0.09,pis:faturamento*0.0165,cofins:faturamento*0.076};};

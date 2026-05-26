@@ -1,0 +1,1 @@
+export default function InputMoeda({value,onChange}){return <input inputMode='decimal' type='number' className='w-full rounded bg-card p-2' value={value} onChange={e=>onChange(Number(e.target.value))} />}

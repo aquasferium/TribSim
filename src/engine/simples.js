@@ -1,0 +1,3 @@
+import { ANEXOS, PERC_DAS } from '../data/tabelasSimples';
+const pick=(r,a,f)=>a==='servicos'?(f>=0.28?'III':'V'):a==='comercio'?'I':a==='industria'?'II':'III';
+export function calcularSimples({receitaBruta12m,receitaMes,atividade,folha12m}){const fatorR=receitaBruta12m?folha12m/receitaBruta12m:0,anexo=pick(receitaBruta12m,atividade,fatorR),tab=ANEXOS[anexo],faixa=tab.find(f=>receitaBruta12m<=f.ate)||tab.at(-1),aliq=(receitaBruta12m*faixa.aliquota-faixa.deducao)/receitaBruta12m,das=receitaMes*Math.max(0,aliq);return{anexo,fatorR,das,cbsNoDas:das*PERC_DAS[anexo].cbs,ibsNoDas:das*PERC_DAS[anexo].ibs};}

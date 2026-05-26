@@ -1,0 +1,1 @@
+export const TRANSICAO={2024:{novo:0,velho:1},2025:{novo:0,velho:1},2026:{novo:0.01,velho:0.99},2027:{novo:0.3,velho:0.7},2028:{novo:0.45,velho:0.55},2029:{novo:0.6,velho:0.4},2030:{novo:0.7,velho:0.3},2031:{novo:0.8,velho:0.2},2032:{novo:0.9,velho:0.1},2033:{novo:1,velho:0}};
