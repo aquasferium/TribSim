@@ -32,3 +32,4 @@ export default function EtapaEmpresa({ dados, setDados }) {
     </section>
   );
 }
+
