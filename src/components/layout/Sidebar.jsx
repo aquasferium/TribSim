@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom';
+export default function Sidebar(){const links=[['/','Simulador'],['/comparativo','Comparativo'],['/transicao','Transição'],['/creditos','Créditos'],['/glossario','Glossário']];return <aside className='bg-superficie border-r border-borda p-4 lg:min-h-screen'><h1 className='font-display text-2xl text-ouro'>TribSim</h1><nav className='mt-4 space-y-2'>{links.map(([to,t])=><Link key={to} to={to} className='block rounded bg-card px-3 py-2 hover:border hover:border-ouro'>{t}</Link>)}</nav></aside>}

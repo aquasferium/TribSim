@@ -1,0 +1,2 @@
+import { useMemo, useState } from 'react';import { calcular } from '../engine';
+export function useSimulacao(){const [dados,setDados]=useState({regime:'lucro_presumido',atividade:'servicos',uf:'SP',receita12m:1800000,faturamento:150000,folha12m:300000,compras:40000,servicos:15000,ativo:5000,exportacoes:0,percZero:0,percReducao:20,ano:2027,itensIS:{}});const resultado=useMemo(()=>calcular(dados),[dados]);return{dados,setDados,resultado};}

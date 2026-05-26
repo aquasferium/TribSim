@@ -1,0 +1,1 @@
+export const ATIVIDADES=[{id:'comercio',label:'Comércio'},{id:'industria',label:'Indústria'},{id:'servicos',label:'Serviços'},{id:'transporte_cargas',label:'Transporte de Cargas'},{id:'transporte_passageiros',label:'Transporte de Passageiros'},{id:'servicos_hospitalares',label:'Serviços Hospitalares'}];
