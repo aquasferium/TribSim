@@ -1,0 +1,2 @@
+import { ALIQUOTAS_IBS_UF } from '../data/aliquotasIBS';
+export function calcularIBS({faturamento,creditosEntrada,percZero,percReducao,uf}){const a=ALIQUOTAS_IBS_UF[uf]||ALIQUOTAS_IBS_UF._default,bz=faturamento*(percZero/100),br=faturamento*(percReducao/100),bp=Math.max(0,faturamento-bz-br);const ibsBruto=bp*a.total+br*(a.total*0.6);const creditoIBS=creditosEntrada*a.total;return{ibsBruto,creditoIBS,ibsLiquido:Math.max(0,ibsBruto-creditoIBS),aliquota:a.total};}

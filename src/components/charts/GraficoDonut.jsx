@@ -1,0 +1,2 @@
+import { PieChart,Pie,Cell,ResponsiveContainer } from 'recharts';
+export default function GraficoDonut({r}){const d=[{n:'CBS',v:r.cbs.cbsLiquido,c:'#C9A84C'},{n:'IBS',v:r.ibs.ibsLiquido,c:'#60A5FA'},{n:'IS',v:r.is,c:'#EF4444'}];return <ResponsiveContainer width='100%' height={240}><PieChart><Pie data={d} dataKey='v' nameKey='n'>{d.map(i=><Cell key={i.n} fill={i.c}/>)}</Pie></PieChart></ResponsiveContainer>}

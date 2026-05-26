@@ -1,0 +1,1 @@
+export default function Glossario(){return <div className='space-y-2'><h2 className='font-display text-2xl'>Glossário</h2><p>CBS: Contribuição sobre Bens e Serviços.</p><p>IBS: Imposto sobre Bens e Serviços.</p><p>IS: Imposto Seletivo.</p></div>}

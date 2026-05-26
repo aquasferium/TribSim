@@ -1,0 +1,2 @@
+export const ALIQUOTA_CBS_PADRAO=0.088,ALIQUOTA_CBS_REDUZIDA=0.088*0.6,ALIQUOTA_CBS_ZERO=0;
+export function calcularCBS({faturamento,creditosEntrada,percZero,percReducao}){const bz=faturamento*(percZero/100),br=faturamento*(percReducao/100),bp=Math.max(0,faturamento-bz-br);const cbsBruto=bp*ALIQUOTA_CBS_PADRAO+br*ALIQUOTA_CBS_REDUZIDA+bz*ALIQUOTA_CBS_ZERO;const creditoCBS=creditosEntrada*ALIQUOTA_CBS_PADRAO;return{cbsBruto,creditoCBS,cbsLiquido:Math.max(0,cbsBruto-creditoCBS),aliquotaEfetiva:faturamento?cbsBruto/faturamento:0};}
